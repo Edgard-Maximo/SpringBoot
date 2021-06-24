@@ -1,0 +1,14 @@
+package hellowolrd.objetivosApredizagem;
+
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+@SpringBootApplication
+public class objetivosAprendizagem {
+
+	public static void main(String[] args) {
+		.run(objetivosAprendizagemApplication.class, args);
+	}
+
+}
