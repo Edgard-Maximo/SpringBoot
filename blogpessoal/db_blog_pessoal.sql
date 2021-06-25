@@ -1,0 +1,1 @@
+insert into postagem(date, texto, titulo) values ("2021-06-24", "Teste", "Testando123");
