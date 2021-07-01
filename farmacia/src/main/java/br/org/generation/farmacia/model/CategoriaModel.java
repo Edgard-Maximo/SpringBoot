@@ -23,16 +23,15 @@ public class CategoriaModel {
 	private long id;
 
 	@NotNull
-	@Size(min = 3, max = 100,message = "Campo obrigatório, inserir de 3 a 100 caracteres")
+	@Size(min = 3, max = 100, message = "Campo obrigatório, inserir de 3 a 100 caracteres")
 	private String descricao;
-	
-	@NotNull(message= "O atributo qntEstoque é obrigatório!")
+
+	@NotNull(message = "O atributo qntEstoque é obrigatório!")
 	private Integer qntEstoque;
-	
+
 	@OneToMany(mappedBy = "categoriaModel", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("categoriaModel")
 	private List<ProdutoModel> produtoModel;
-
 
 	public List<ProdutoModel> getProdutoModel() {
 		return produtoModel;
@@ -65,9 +64,5 @@ public class CategoriaModel {
 	public void setQntEstoque(Integer qntEstoque) {
 		this.qntEstoque = qntEstoque;
 	}
-	
-	
-	
-}
 
-	
+}

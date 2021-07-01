@@ -19,15 +19,13 @@ import org.springframework.web.bind.annotation.RestController;
 import br.org.generation.farmacia.model.CategoriaModel;
 import br.org.generation.farmacia.repository.CategoriaRepository;
 
-
 @RestController
 @RequestMapping("/categoria")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CategoriaController {
-	
-	
+
 	@Autowired
-	private CategoriaRepository  model_repository;
+	private CategoriaRepository model_repository;
 
 	@GetMapping
 	public HttpEntity<List<CategoriaModel>> GetAll() {
@@ -36,8 +34,7 @@ public class CategoriaController {
 
 	@GetMapping("/{id}")
 	public ResponseEntity<CategoriaModel> GetById(@PathVariable long id) {
-		return model_repository.findById(id)
-				.map(resp -> ResponseEntity.ok(resp))
+		return model_repository.findById(id).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 
 	}

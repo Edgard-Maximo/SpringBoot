@@ -31,12 +31,10 @@ public class ProdutoModel {
 
 	@NotNull(message = "(Entrega|Retirada)")
 	private Boolean entrega;
-	
 
 	@ManyToOne
 	@JsonIgnoreProperties("produtosModel")
 	private CategoriaModel categoriaModel;
-
 
 	public CategoriaModel getCategoriaModel() {
 		return categoriaModel;
